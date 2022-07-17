@@ -17,12 +17,8 @@ function SalesCard() {
     const [maxDate, setMaxDate] = useState(max);
 
     const [sales, setSales] = useState<Sale[]>([]);
+    
 
-    const coinFormat = {
-        minimumFractionDigits: 2,
-        style: 'currency',
-        currency: 'BRL',
-      };
 
     useEffect(() => {
 
@@ -30,7 +26,7 @@ function SalesCard() {
         const dmax = maxDate.toISOString().slice(0, 10);
         
 
-        
+        console.log(dmin);
 
         axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
             .then(response => {

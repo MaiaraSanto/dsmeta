@@ -17,8 +17,9 @@ function SalesCard() {
     const [maxDate, setMaxDate] = useState(max);
 
     const [sales, setSales] = useState<Sale[]>([]);
-    
 
+    const valor = 5000;  
+    valor.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
 
     useEffect(() => {
 
